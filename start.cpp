@@ -2,6 +2,19 @@
 #include <fstream>      // std::ifstream
 #include <iostream>
 #include <string>
+#include <vector>
+#include <sstream>
+
+std::vector<int> split(const std::string& s, char delim, std::vector<int>& v) {
+   
+    std::stringstream ss(s);
+    std::string number;
+    while (std::getline(ss, number, delim)) {
+        v.push_back(std::stoi(number));
+    }
+   
+}
+
 
 int main()
 {
@@ -19,10 +32,18 @@ int main()
         return l.substr((int)c + 1); 
     };
 
+  
+
+
+  
+
     int tileswide; 
     int tileshigh; 
     int tilewidth;
     int tileheight; 
+    std::vector<std::vector< int >> map;
+    bool isInLayer = false; 
+    int layer; 
 
     if (is.is_open())
     {
@@ -46,6 +67,39 @@ int main()
                     break;
 
                 default: 
+                    if (line != "") {
+                        if (!isInLayer)
+                        {
+                            layer = std::stoi(extract_number(line));
+                            map.push_back(std::vector<int>()); 
+                            isInLayer = true; 
+                        }
+                        else {
+                           
+                            std::cout << line << '\n'; 
+                            for (size_t i = 0; i < line.size(); i++)
+                            {
+                               
+                                if (line.substr(i, i + 2) == "-1")
+                                {
+                                    
+                                    map[layer].push_back(-1);
+                                   
+                                }
+                                else if (line[i] != ',')
+                                {
+                                    map[layer].push_back((int)line[i] - 48);
+                                }
+                            }
+                        }
+
+                    }
+
+                    if (line == "" && isInLayer) {
+                        isInLayer = false;
+                    }
+
+
 
                 break; 
             }
