@@ -1,5 +1,5 @@
-#ifndef _MAP
-#define _MAP
+#ifndef _MAP_H
+#define _MAP_H
 
 #include <fstream>      // std::ifstream
 #include <iostream>
