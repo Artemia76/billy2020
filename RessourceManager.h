@@ -8,7 +8,8 @@
 class RessourceManager
 {
 public : 
-	void load(const int& id, sf::Texture texture); 
+	//void load(const int& id, sf::Texture& texture); 
+	void load(const int& id, std::string textureName);
 	sf::Texture& get(const int& id) const; 
 
 private: 

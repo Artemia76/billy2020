@@ -2,6 +2,9 @@
 #define PLAYER_H
 
 #include <SFML/Graphics.hpp>
+#include "ResourceDispatcher.h"
+
+
 class Player : public sf::Drawable
 {
 
@@ -18,9 +21,10 @@ public:
 private:
     virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
 
-    sf::Sprite          _character;
-    sf::Vector2f        _velocity;
-    sf::CircleShape _circle;
+    sf::Sprite _character;
+    sf::Vector2f _velocity;
+    sf::Texture texture;
+   // sf::CircleShape _circle;
 
     bool _is_moving;
     int _rotation;

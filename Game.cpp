@@ -5,11 +5,19 @@ Game::Game() : _window(sf::VideoMode(800, 600), "Plateformer 0.1")
 	
 }
 
+void Game::init()
+{
+	
+	
+}
+
+
 void Game::run(int frame_per_seconds)
 {
 	sf::Clock clock;
 	sf::Time timeSinceLastUpdate = sf::Time::Zero;
 	sf::Time TimePerFrame = sf::seconds(1.f / frame_per_seconds);
+
 	while (_window.isOpen())
 	{
 		processEvents();

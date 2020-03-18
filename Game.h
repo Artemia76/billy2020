@@ -3,6 +3,7 @@
 
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
+#include "ResourceDispatcher.h"
 #include "Player.h"
 
     class Game
@@ -14,12 +15,14 @@
 
         Game(); //< constructor
 
+        void init(); 
         void run(int frame_per_seconds);
-
-        void run();
+     
         void runWithFixedTimeSteps(int frame_per_seconds = 60);
         void runWithVariableTimeSteps();
         void runWithMinimumTimeSteps(int minimum_frame_per_seconds = 30);
+        
+
 
     private:
 
@@ -29,6 +32,7 @@
         void render();//< draw all the stuff
 
         sf::RenderWindow _window; //< the window use to display the game
+       
 
         Player _player; 
        
