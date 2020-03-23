@@ -3,7 +3,8 @@
 Player::Player() : 
 	_position(sf::Vector2f(300,15)),
 	_animateRight({ 0,0,36,61,5,  ResourceDispatcher::rDispatcherTexture.get(0) }), 
-	_animateIdle({ 0,61,36,61,2,  ResourceDispatcher::rDispatcherTexture.get(0) })
+	_animateIdle({ 0,61,36,61,2,  ResourceDispatcher::rDispatcherTexture.get(0) }), 
+	_animateLeft({ 0,122,36,61,5,  ResourceDispatcher::rDispatcherTexture.get(0) })
 {
 	//auto sf(ResourceDispatcher::rDispatcherTexture.get(0)); 
 	_character.setPosition(_position);
@@ -26,8 +27,8 @@ void Player::processEvents( float sec)
 
 		_position.x -= 50.0f * sec;
 		_character.setPosition(_position);
-		_animateRight.Update(sec);
-		_animateRight.ApplyToSprite(_character);
+		_animateLeft.Update(sec);
+		_animateLeft.ApplyToSprite(_character);
 
 	}
 	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
