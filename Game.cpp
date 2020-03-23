@@ -52,20 +52,28 @@ void Game::processEvents()
 
 	sf::Event event;
 	while (_window.pollEvent(event)) {
-		if ((event.type == sf::Event::Closed)
-			or ((event.type == sf::Event::KeyPressed) and (event.key.code
-				== sf::Keyboard::Escape))) {
+		if ((event.type == sf::Event::Closed)) {
 			_window.close();
 		}
+		/*else if (event.type == sf::Event::KeyPressed) {
+			if (event.key.code == sf::Keyboard::Left) {
+				_player.moveLeft(1.0f); 
+			}
+
+		}*/
 	}
+	
 }
 
 void Game::update()
 {
+	
+
 }
 
 void Game::update(sf::Time deltaTime)
 {
+	_player.update(deltaTime);
 }
 
 void Game::render()
