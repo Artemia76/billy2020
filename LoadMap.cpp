@@ -1,7 +1,7 @@
-#include "Map.h"
+#include "LoadMap.h"
 
 
-void Map::split_insert(const std::string& s, char delim, std::vector<int>& v)
+void LoadMap::split_insert(const std::string& s, char delim, std::vector<int>& v)
 {
 
     std::stringstream ss(s);
@@ -11,7 +11,8 @@ void Map::split_insert(const std::string& s, char delim, std::vector<int>& v)
     }
 }
 
-void Map::createMap(std::string mapName)
+
+void LoadMap::createMap(std::string mapName)
 {
     is = new std::ifstream(mapName);
 
@@ -76,7 +77,7 @@ void Map::createMap(std::string mapName)
     
 }
 
-Map::Map()
+LoadMap::LoadMap()
 {
    
 }

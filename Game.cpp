@@ -1,8 +1,11 @@
 #include "Game.h"
 
-Game::Game() : _window(sf::VideoMode(800, 600), "Plateformer 0.1")
+Game::Game() : _window(sf::VideoMode(1200, 800), "Plateformer 0.1")
 {
-	
+	map.createMap("assets/maps/tilemap.txt");
+	tMap.init(map, ResourceDispatcher::rDispatcherTexture.get(TextureName::map));
+	tMap.load();
+	tMap.loadLayer1();
 }
 
 void Game::init()
@@ -80,6 +83,8 @@ void Game::render()
 {
 
 	_window.clear();
+	
 	_window.draw(_player);
+	_window.draw(tMap);
 	_window.display();
 }

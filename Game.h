@@ -5,8 +5,11 @@
 #include <SFML/Graphics.hpp>
 #include "ResourceDispatcher.h"
 #include "Player.h"
+#include "LoadMap.h"
+#include "TilesMap.h"
 
-    class Game
+
+class Game 
     {
     public:
         //non copyable class
@@ -35,6 +38,8 @@
        
 
         Player _player; 
+        LoadMap map;
+        TilesMap tMap; 
        
 
     };

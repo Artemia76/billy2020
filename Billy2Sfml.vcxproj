@@ -178,18 +178,20 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Game.cpp" />
-    <ClCompile Include="Map.cpp" />
+    <ClCompile Include="LoadMap.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="ResourceDispatcher.cpp" />
     <ClCompile Include="RessourceManager.cpp" />
     <ClCompile Include="start.cpp" />
+    <ClCompile Include="TilesMap.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h" />
-    <ClInclude Include="Map.h" />
+    <ClInclude Include="LoadMap.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="RessourceManager.h" />
     <ClInclude Include="ResourceDispatcher.h" />
+    <ClInclude Include="TilesMap.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

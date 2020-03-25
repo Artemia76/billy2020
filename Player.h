@@ -41,7 +41,7 @@ private :
 
     int _nFrames ;
     int _iFrame = 0; 
-    const float _holdTime = 0.1f; 
+    const float _holdTime = 0.15; 
     sf::Texture _texture; 
     std::vector<sf::IntRect> frames; 
     float time = 0.0f; 
