@@ -356,5 +356,4 @@ MigrationBackup/
 .ionide/
 
 #ignore lib and include 
-include/
 lib/

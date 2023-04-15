@@ -7,7 +7,7 @@
 #include <SFML/Graphics.hpp>
 
 
-static enum TextureName { player, map };
+enum TextureName { player, map };
 
 class ResourceDispatcher
 {
