@@ -1,13 +1,13 @@
-#include <SFML/Graphics.hpp>
+ï»¿#include <SFML/Graphics.hpp>
 #include <iostream>
 #include <string>
 #include <vector>
-#include "ResourceDispatcher.h"
 #include "Game.h"
 
-
-
-
+///
+/// \brief main
+/// \return
+///
 int main()
 {
 
@@ -15,11 +15,8 @@ int main()
     //load maps 
     //std::string line; 
     //std::ifstream is("assets/maps/tilemap.txt");
-    //lire le nombre de tuile en largeur et en hauteur stocké la taille des tuilles 
-    //si la ligne commence par layer stocké dans layer rajouté dans un tableau toutes les tuiles 
-  
-    
-    ResourceDispatcher::initTextures();
+    //lire le nombre de tuile en largeur et en hauteur stockÃ© la taille des tuilles 
+    //si la ligne commence par layer stockÃ© dans layer rajoutÃ© dans un tableau toutes les tuiles 
 
     Game* game = new Game(); 
 

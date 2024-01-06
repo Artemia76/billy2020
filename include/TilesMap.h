@@ -18,14 +18,10 @@ public :
 	bool load(); 
 	bool loadLayer1();
 
-	void init(LoadMap map, sf::Texture texture); 
+    void init(LoadMap map, sf::Texture texture);
 	 
 
-	void getTileAt(int x, int y); 
-	
-
-
-
+    void getTileAt(int x, int y);
 };
 
 #endif // !TILES_MAP_H

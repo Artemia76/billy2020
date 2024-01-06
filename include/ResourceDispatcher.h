@@ -1,9 +1,9 @@
 #ifndef RESSOURCEDISPATCHER_H
 #define RESSOURCEDISPATCHER_H
 
-//stock toutes les ressources 
+//stock toutes les ressources
 
-#include "RessourceManager.h"
+#include "ResourceManager.h"
 #include <SFML/Graphics.hpp>
 
 
@@ -13,19 +13,15 @@ class ResourceDispatcher
 {
 public : 
 	
-	static RessourceManager rDispatcherTexture ; 
+    static ResourceManager rDispatcherTexture ;
 	
 
-	static void initialize(); 
-	static void initTextures();
-
-
-	
-
+    static void initialize();
+    static void initTextures();
 };
 
 
-//TextureName ResourceDispatcher::textureName; 
+//TextureName ResourceDispatcher::textureName;
 
 
 #endif

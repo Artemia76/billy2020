@@ -1,6 +1,6 @@
-#include "RessourceManager.h"
+#include "ResourceManager.h"
 
-void RessourceManager::load(const int& id, std::string textureName)
+void ResourceManager::load(const int& id, std::string textureName)
 {
 	
 	sf::Texture texture;
@@ -13,9 +13,9 @@ void RessourceManager::load(const int& id, std::string textureName)
 
 
 
-sf::Texture& RessourceManager::get(const int& id) const
+sf::Texture& ResourceManager::get(const int& id) const
 {
-	// TODO: insérer une instruction return ici
+    // TODO: insÃ©rer une instruction return ici
 	//auto t = _map.at(id); 
 	 sf::Texture* text =  _map.at(id).get();
 	 return *(_map.at(id).get());

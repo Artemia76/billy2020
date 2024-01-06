@@ -14,14 +14,14 @@ class LoadMap
 private:
 	void split_insert(const std::string& s, char delim, std::vector<int>& v); 
 	std::string line;
-	std::ifstream* is;
+    std::ifstream* is;
     bool isInLayer = false;
     int layer;
 
-   
 
-public: 
-    void createMap(std::string mapName); 
+
+public:
+    void createMap(std::string mapName);
     std::vector<std::vector< int >> map;
 
     int tileswide;
@@ -30,7 +30,7 @@ public:
     int tileheight;
 
     LoadMap();
-	
+
 
 
 

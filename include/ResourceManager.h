@@ -5,7 +5,7 @@
 #include <string> //string
 #include <memory> //unique_ptr
 
-class RessourceManager
+class ResourceManager
 {
 public : 
 	//void load(const int& id, sf::Texture& texture); 

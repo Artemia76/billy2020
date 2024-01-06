@@ -1,6 +1,6 @@
 #include "ResourceDispatcher.h"
 
-RessourceManager ResourceDispatcher::rDispatcherTexture;
+ResourceManager ResourceDispatcher::rDispatcherTexture;
 
 void ResourceDispatcher::initialize()
 {
